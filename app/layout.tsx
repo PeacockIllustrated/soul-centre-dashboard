@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    variable: "--font-playfair",
+});
+
+const lato = Lato({
+    weight: ["100", "300", "400", "700", "900"],
+    subsets: ["latin"],
+    variable: "--font-lato",
+});
 
 export const metadata: Metadata = {
     title: "The Soul Centre Admin",
@@ -17,7 +26,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
+            <body className={cn(
+                playfair.variable,
+                lato.variable,
+                "min-h-screen bg-background font-sans antialiased"
+            )}>
                 {children}
             </body>
         </html>

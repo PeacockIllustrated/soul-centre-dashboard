@@ -42,9 +42,9 @@ export default async function DashboardLayout({
     return (
         <div className="flex h-screen bg-gray-50">
             {/* Sidebar */}
-            <div className="hidden w-64 flex-col bg-white border-r border-gray-200 md:flex">
-                <div className="flex h-16 items-center justify-center border-b border-gray-200 px-4">
-                    <h1 className="text-lg font-semibold tracking-tight text-gray-900">The Soul Centre</h1>
+            <div className="hidden w-64 flex-col bg-[#2C3E38] border-r border-[#2C3E38] md:flex text-white">
+                <div className="flex h-16 items-center justify-center border-b border-white/10 px-4">
+                    <h1 className="text-xl font-serif tracking-wide text-[#F8F6F3]">The Soul Centre</h1>
                 </div>
                 <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
                     <nav className="mt-5 flex-1 space-y-1 px-2">
@@ -52,10 +52,10 @@ export default async function DashboardLayout({
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="group flex items-center rounded-md px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                                className="group flex items-center rounded-md px-2 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
                             >
                                 <item.icon
-                                    className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                    className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-white"
                                     aria-hidden="true"
                                 />
                                 {item.name}
@@ -63,14 +63,14 @@ export default async function DashboardLayout({
                         ))}
                     </nav>
                 </div>
-                <div className="border-t border-gray-200 p-4">
+                <div className="border-t border-white/10 p-4">
                     <form action={signOut}>
                         <button
                             type="submit"
-                            className="group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                            className="group flex w-full items-center rounded-md px-2 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
                         >
                             <LogOut
-                                className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-white"
                                 aria-hidden="true"
                             />
                             Sign out
