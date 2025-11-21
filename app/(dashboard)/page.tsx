@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Users, Calendar, Sparkles, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
